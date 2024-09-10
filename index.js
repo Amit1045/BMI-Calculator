@@ -4,7 +4,7 @@ button.addEventListener("click",function(e){
 const Userheight=document.querySelector("#userheight").value;
 const Userweight=document.querySelector("#userweight").value;
 
-    const bmi=(((703*Userweight/(Userheight*Userheight))*10)).toFixed(2)
+    const bmi = (Userweight / (Userheight * Userheight) * 10000).toFixed(2);
           if(bmi<18.5)
           {
             document.getElementById("result").innerHTML=`Your BMI is: ${bmi},  so you are underweight.`
